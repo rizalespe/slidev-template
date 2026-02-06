@@ -11,7 +11,7 @@ This repository contains multiple Slidev templates for easy reuse and sharing.
 
 1. **Clone this repository:**
    ```sh
-   git clone <this-repo-url>
+   git clone https://github.com/rizalespe/slidev-template.git
    cd slidev-template
    ```
 2. **Run the setup script:**

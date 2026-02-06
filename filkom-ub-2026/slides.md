@@ -177,7 +177,7 @@ layout: default
   <h1>Diagram Arsitektur</h1>
   
   <div style="text-align: center; margin: -50px 0;">
-    <img src="/images/mlops-loop-en.jpg" alt="Architecture Diagram" style="width: 60%; max-width: 500px; height: auto;" />
+    <img src="/images/sample.jpeg" alt="Architecture Diagram" style="width: 60%; max-width: 500px; height: auto;" />
   </div>
   
   
