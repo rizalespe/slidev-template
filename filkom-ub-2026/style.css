@@ -1,0 +1,312 @@
+/* ========================================
+   FILKOM UB - Using Complete Background Images
+   No need for individual logo/pattern files
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Remove default Slidev styling */
+.slidev-layout {
+  padding: 0 !important;
+  background: none !important;
+}
+
+/* ===========================
+   TITLE SLIDE (Opening)
+   Uses: slidev-title-blank.png
+   =========================== */
+
+.title-slide {
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/images/slidev-title-blank.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 !important;
+}
+
+/* Content positioning for title slide */
+.title-slide .title-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 80px 60px 100px 100px;
+  height: 100%;
+  max-width: 50%;
+}
+
+/* Left side - text info */
+.title-slide .title-info {
+  width: 100%;
+}
+
+.title-slide h1 {
+  color: #0066CC;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+.title-slide h2 {
+  color: #0066CC;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 18px 0 8px 0;
+}
+
+.title-slide p {
+  color: #0066CC;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 6px 0;
+}
+
+.title-slide .meta-info p {
+  color: #0066CC;
+  margin-bottom: 12px;
+}
+
+.title-slide .version-info {
+  margin-top: 25px;
+}
+
+.title-slide .version-info p {
+  color: #333;
+  font-size: 14px;
+}
+
+.title-slide .copyright {
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Website footer */
+.title-slide .website-footer {
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #0066CC;
+}
+
+/* ===========================
+   SUBTITLE SLIDE (Section Title)
+   Uses: slidev-subtitle-blank.png
+   =========================== */
+
+.subtitle-slide {
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/images/slidev-subtitle-blank.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 80px !important;
+}
+
+.subtitle-slide h1 {
+  color: #0066CC;
+  font-size: 56px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* ===========================
+   CONTENT SLIDE (Regular)
+   Uses: slidev-content-sample.png as base
+   Or just the subtitle-blank with content at top
+   =========================== */
+
+.content-slide {
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/images/slidev-subtitle-blank.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 80px 120px 100px !important;
+}
+
+.content-slide h1 {
+  color: #0066CC;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.content-slide h2 {
+  color: #0066CC;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 30px 0 20px 0;
+}
+
+.content-slide h3 {
+  color: #0066CC;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 25px 0 15px 0;
+}
+
+.content-slide p {
+  color: #333;
+  font-size: 20px;
+  line-height: 1.8;
+  margin: 15px 0;
+}
+
+.content-slide ul,
+.content-slide ol {
+  color: #0066CC;
+  font-size: 20px;
+  line-height: 2;
+  margin: 20px 0;
+  padding-left: 40px;
+}
+
+.content-slide li {
+  margin: 12px 0;
+  color: #0066CC;
+}
+
+.content-slide strong {
+  color: #0066CC;
+  font-weight: 600;
+}
+
+/* ===========================
+   CODE BLOCKS
+   =========================== */
+
+.content-slide pre {
+  background: #1E293B !important;
+  border-radius: 8px;
+  padding: 20px !important;
+  margin: 20px 0;
+}
+
+.content-slide code {
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+}
+
+.content-slide :not(pre) > code {
+  background: rgba(0, 102, 204, 0.1);
+  color: #0066CC;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+/* ===========================
+   TABLES
+   =========================== */
+
+.content-slide table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.content-slide thead {
+  background: linear-gradient(135deg, #0066CC 0%, #3399FF 100%);
+  color: white;
+}
+
+.content-slide th {
+  padding: 15px 20px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.content-slide td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #E5E7EB;
+  color: #333;
+  font-size: 18px;
+}
+
+.content-slide tr:last-child td {
+  border-bottom: none;
+}
+
+.content-slide tbody tr:hover {
+  background: rgba(0, 102, 204, 0.04);
+}
+
+/* ===========================
+   IMAGES (not background)
+   =========================== */
+
+.content-slide img,
+.title-slide .building-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* ===========================
+   BLOCKQUOTES
+   =========================== */
+
+.content-slide blockquote {
+  border-left: 4px solid #0066CC;
+  padding: 15px 25px;
+  margin: 25px 0;
+  background: rgba(0, 102, 204, 0.05);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: #555;
+}
+
+/* ===========================
+   UTILITY CLASSES
+   =========================== */
+
+.text-center {
+  text-align: center;
+}
+
+.text-blue {
+  color: #0066CC;
+}
+
+.highlight {
+  background: rgba(0, 102, 204, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.highlight-box {
+  border-left: 5px solid #42b883;
+  padding: 10px 20px;
+  background: #f3f4f6;
+  border-radius: 4px;
+}
