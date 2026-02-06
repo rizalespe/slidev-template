@@ -27,11 +27,12 @@ fi
 
 
 # 3. Copy template files to target directory (force overwrite)
-cp -f style.css "$TARGET_DIR/style.css"
-cp -f slides.md "$TARGET_DIR/slides.md"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cp -f "$SCRIPT_DIR/style.css" "$TARGET_DIR/style.css"
+cp -f "$SCRIPT_DIR/slides.md" "$TARGET_DIR/slides.md"
 mkdir -p "$TARGET_DIR/public/images"
-if [ -d images ]; then
-  cp -Rf public/images/* "$TARGET_DIR/public/images/"
+if [ -d "$SCRIPT_DIR/public/images" ]; then
+  cp -Rf "$SCRIPT_DIR/public/images"/* "$TARGET_DIR/public/images/"
 fi
 
 # 4. Optional: Copy Slidev config
