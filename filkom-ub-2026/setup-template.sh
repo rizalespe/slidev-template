@@ -15,7 +15,7 @@ if [ -f ../package.json ]; then
   (cd .. && npm install)
 else
   echo "No package.json found in parent directory. Initializing Slidev project..."
-  (cd .. && npm create slidev@latest . -- --yes)
+  (cd .. && npm create slidev@latest . -- --yes --template none)
 fi
 
 # 2. Copy template files to parent directory
