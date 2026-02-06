@@ -14,14 +14,26 @@ This repository contains multiple Slidev templates for easy reuse and sharing.
    git clone https://github.com/rizalespe/slidev-template.git
    cd slidev-template
    ```
+
 2. **Run the setup script:**
    ```sh
    cd filkom-ub-2026
    ./setup-template.sh
    ```
+   If you see a "Permission denied" error, run:
+   ```sh
+   bash setup-template.sh
+   ```
+   Or make it executable first:
+   ```sh
+   chmod +x setup-template.sh
+   ./setup-template.sh
+   ```
    This will copy the template files to your chosen directory.
 
 3. **Follow the instructions in the script to finish setup.**
+
+> **Note:** Git does not always preserve executable permissions for scripts. Using `bash setup-template.sh` always works, even if the file is not marked as executable.
 
 ## Adding More Templates
 
