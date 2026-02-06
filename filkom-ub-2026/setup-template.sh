@@ -31,7 +31,7 @@ cp -f style.css "$TARGET_DIR/style.css"
 cp -f slides.md "$TARGET_DIR/slides.md"
 mkdir -p "$TARGET_DIR/public/images"
 if [ -d images ]; then
-  cp -Rf images/* "$TARGET_DIR/public/images/"
+  cp -Rf public/images/* "$TARGET_DIR/public/images/"
 fi
 
 # 4. Optional: Copy Slidev config
