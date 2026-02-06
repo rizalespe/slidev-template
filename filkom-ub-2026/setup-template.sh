@@ -8,13 +8,14 @@
 
 set -e
 
-# 1. Install dependencies in parent directory
+
+# 1. Ensure Slidev project in parent directory
 if [ -f ../package.json ]; then
   echo "Installing npm dependencies in parent directory..."
   (cd .. && npm install)
 else
-  echo "No package.json found in parent directory. Please initialize your project with Slidev first."
-  exit 1
+  echo "No package.json found in parent directory. Initializing Slidev project..."
+  (cd .. && npm create slidev@latest . -- --yes)
 fi
 
 # 2. Copy template files to parent directory
