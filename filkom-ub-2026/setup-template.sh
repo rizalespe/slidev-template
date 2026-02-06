@@ -25,12 +25,13 @@ else
   (cd "$TARGET_DIR" && npm create slidev@latest . -- --yes --template none)
 fi
 
-# 3. Copy template files to target directory
-cp -r style.css "$TARGET_DIR/style.css"
-cp -r slides.md "$TARGET_DIR/slides.md"
+
+# 3. Copy template files to target directory (force overwrite)
+cp -f style.css "$TARGET_DIR/style.css"
+cp -f slides.md "$TARGET_DIR/slides.md"
 mkdir -p "$TARGET_DIR/public/images"
 if [ -d images ]; then
-  cp -r images/* "$TARGET_DIR/public/images/"
+  cp -Rf images/* "$TARGET_DIR/public/images/"
 fi
 
 # 4. Optional: Copy Slidev config
