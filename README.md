@@ -9,31 +9,35 @@ This repository contains multiple Slidev templates for easy reuse and sharing.
 
 ## How to Use a Template
 
-1. **Clone this repository:**
+## Initial installation
+
+- **Prerequisites:** Node.js (v16+), npm, and Git (optional).
+
+1. Clone the repository:
    ```sh
    git clone https://github.com/rizalespe/slidev-template.git
    cd slidev-template
    ```
 
-2. **Run the setup script:**
+2. Run the template setup script (interactive):
    ```sh
    cd filkom-ub-2026
-   ./setup-template.sh
-   ```
-   If you see a "Permission denied" error, run:
-   ```sh
    bash setup-template.sh
    ```
-   Or make it executable first:
+   - The script will prompt for a target project directory (default: `../my-slidev-project`).
+   - It will initialize a Slidev project if `package.json` is missing and install dependencies.
+
+3. Run non-interactively by passing a target directory:
    ```sh
-   chmod +x setup-template.sh
-   ./setup-template.sh
+   bash setup-template.sh ../my-slidev-presentation
    ```
-   This will copy the template files to your chosen directory.
 
-3. **Follow the instructions in the script to finish setup.**
+4. Show help:
+   ```sh
+   bash setup-template.sh --help
+   ```
 
-> **Note:** Git does not always preserve executable permissions for scripts. Using `bash setup-template.sh` always works, even if the file is not marked as executable.
+Note: If you get a permission error, use `bash setup-template.sh` or make it executable with `chmod +x setup-template.sh`.
 
 ## Adding More Templates
 

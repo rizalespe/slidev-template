@@ -4,7 +4,20 @@
 
 set -e
 
-TARGET_DIR="${1:-../my-slidev-project}"
+# Show help
+if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+  echo "Usage: bash setup-template.sh [target-directory]"
+  echo "If no directory is provided, you'll be prompted to enter one."
+  exit 0
+fi
+
+DEFAULT_DIR="../my-slidev-project"
+if [ -n "$1" ]; then
+  TARGET_DIR="$1"
+else
+  read -e -p "Enter target project directory [$DEFAULT_DIR]: " input_dir
+  TARGET_DIR="${input_dir:-$DEFAULT_DIR}"
+fi
 
 echo "Using target directory: $TARGET_DIR"
 
